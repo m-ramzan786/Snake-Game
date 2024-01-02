@@ -1,0 +1,136 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.grid-container {
+    outline: 15px solid rgb(26, 229, 26);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    border: 1.5px solid black;
+
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.snake {
+    background-color: green;
+}
+
+.apple {
+    background-color: red;
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: greenyellow;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#start-btn {
+    width: 150px;
+    height: 40px;
+    background-color: green;
+    margin-top: 20px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+}
+
+.game-over h2 {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+#pause-btn {
+    cursor: pointer;
+    margin-left: 1em;
+    padding: 4px 5px;
+    background-color: darkgreen;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.controls * {
+    font-size: 1.5rem;
+    margin: 2px;
+    cursor: pointer;
+}
+.left-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.left {
+    transform: rotate(-90deg);
+}
+
+.right {
+    transform: rotate(-90deg);
+}
+
+.up,
+.down,
+.left,
+.right {
+    opacity: 0.8;
+}
+
+.left:active {
+    transform: scale(0.9) rotate(-90deg);
+}
+
+.right:active {
+    transform: scale(0.9) rotate(-90deg);
+}
+
+.up:active,
+.down:active {
+    transform: scale(0.9);
+}
